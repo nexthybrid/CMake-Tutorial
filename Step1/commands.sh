@@ -5,3 +5,4 @@ cmake --build .
 ./Tutorial.exe 100
 ./Tutorial.exe 81
 ./Tutorial 200
+./Tutorial
