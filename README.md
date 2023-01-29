@@ -7,6 +7,11 @@ Go to each StepX folder (X stands for 1,2,3,...), open a terminal, and run the b
 # Peronal Notes For Each Exercise
 
 ## Exercise 1: Build A Simple Project
-For simple projects like this, a CMakeLists.txt file with **three commands** is all that is required.
+For simple projects like this, a CMakeLists.txt file with **three commands** is all that is required:
+```
+cmake_minimum_required(VERSION 3.10)
+project(<project_name>)
+add_executable(<filename> <source_file>)
+```
 
-> **Trick**: In Windows, the default behavior is to generate Visual Studio solutions instead of `Makefile`s. To change this, use `cmake -G "MinGW Makefiles" ../Step1` to specifiy MinGW compiler (or cygwin compiler) to produce `Makefile`s instead.
+> **Trick**: In Windows, the default behavior is to generate Visual Studio solutions instead of `Makefile`s. To change this, use `cmake -G "MinGW Makefiles" ../Step1` to specifiy MinGW compiler (or cygwin compiler) to produce `Makefile`s instead. See `commands.sh` in folder `Step1`.
