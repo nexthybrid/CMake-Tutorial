@@ -1,4 +1,4 @@
-# Issue for Exercise 2
+# [Resolved] Issue for Exercise 2
 
 As of now, the code does not compile. It seems that the compiler cannot find the local folder `MathFunctions`, and threw:
 ```
@@ -10,4 +10,12 @@ mingw32-make.exe: *** [Makefile:102: all] Error 2
 ./commands.sh: line 6: ./Tutorial.exe: No such file or directory
 ```
 
-This bug is TBD. Moving on now to the next tutorial.
+# Root Cause
+The root cause was a case sensitive typo in `Step2/MathFunctions/CMakeLists.txt`:
+```
+add_library(Mathfunctions mysqrt.cxx)
+```
+which should have been
+```
+add_library(MathFunctions mysqrt.cxx)
+```

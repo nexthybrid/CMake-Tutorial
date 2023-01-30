@@ -21,3 +21,7 @@ Go to each StepX folder (X stands for 1,2,3,...), open a terminal, and run the b
 # Peronal Notes For Each Exercise
 
 The notes for each exercise is located inside each StepX folder (X = 1,2,...).
+
+# Tricks Not Mentioned In Tutorial
+
+1. Functions like `target_include_directories()` and `target_link_libraries()` takes directories as inputs. These can be in the form of `${<keyword>}` or `"${<keyword>}"`, where `<keyword>` is a CMake keyword such as `PROJECT_SOURCE_DIR`, `PROJECT_BINARY_DIR`, etc. The use of `" "` seems to be optional.
