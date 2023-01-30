@@ -4,6 +4,12 @@ cmake-*
 # any build folder
 *_build
 
+# vscode settings
+.vscode/*
+
+# my video recaps
+Video_Recap/*
+
 ####### C++ gitignore template (the standard stuff) #######
 
 # Prerequisites
