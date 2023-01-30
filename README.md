@@ -8,9 +8,14 @@ Go to each StepX folder (X stands for 1,2,3,...), open a terminal, and run the b
 |**Term**                           |**Meaning**  |
 |:----------------------------------|:--------|
 |add_executable()                   |create executable from source file |
+|add_library()                      |create a library from source file  |
+|add_subdirectory()                 |add a subdirectory to the build    |
 |cmake_minimum_required()           |specify CMake version requirement  |
-|project()                          |create a project to be built       |
 |configure_file()                   |copy file and substitute variables of @VAR@ type into real values  |
+|project()                          |create a project to be built       |
+|target_include_directories()       |specify where to find headers to include  |
+|target_link_libraries()            |link the libraries to the executable  |
+
 
 
 # Peronal Notes For Each Exercise

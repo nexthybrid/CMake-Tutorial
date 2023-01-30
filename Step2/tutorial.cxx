@@ -2,13 +2,14 @@
 #include <cmath>
 #include <iostream>
 #include <string>
-
-#include "TutorialConfig.h"
-
 // TODO 11: Only include MathFunctions if USE_MYMATH is defined
-
+#include "TutorialConfig.h"
+#ifdef USE_MYMATH // put this line after #include "TutorialConfig.h"
 // TODO 5: Include MathFunctions.h
-#include "MathFunctions.h"
+#  include "MathFunctions.h"
+#endif
+
+
 
 int main(int argc, char* argv[])
 {
@@ -23,12 +24,16 @@ int main(int argc, char* argv[])
   // convert input to double
   const double inputValue = std::stod(argv[1]);
 
-  // TODO 12: Use mysqrt if USE_MYMATH is defined and sqrt otherwise
-
-  // TODO 6: Replace sqrt with mysqrt
-
   // calculate square root
-  const double outputValue = mysqrt(inputValue);
+  // TODO 12: Use mysqrt if USE_MYMATH is defined and sqrt otherwise
+  #ifdef USE_MYMATH
+  // TODO 6: Replace sqrt with mysqrt
+    const double outputValue = mysqrt(inputValue);
+  #else
+    const double outputValue = sqrt(inputValue);
+  #endif
+ 
+
   std::cout << "The square root of " << inputValue << " is " << outputValue
             << std::endl;
   return 0;
